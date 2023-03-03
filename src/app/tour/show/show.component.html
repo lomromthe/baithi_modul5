@@ -1,0 +1,20 @@
+<div class="container-full" style="margin: 0px 150px">
+  <h2>My Tour</h2>
+  <p>GO AND RUN</p>
+  <button type="button" class="btn btn-warning" routerLink="/create" >Thêm</button>
+  <table class="table table-striped">
+    <tr>
+      <th>#</th>
+      <th>Tên Địa Điểm</th>
+      <th>Giá</th>
+      <th>Hành Động</th>
+    </tr>
+    <tr *ngFor="let t of tours">
+      <td>{{t.id}}</td>
+      <td ><a href="/showdetail/{{t.id}}">{{t.title}}</a></td>
+      <td>{{t.price}}</td>
+      <td><button type="button" class="btn btn-warning" routerLink="/edit/{{t.id}}" >Edit</button></td>
+      <td><button type="button" class="btn btn-danger" routerLink="/delete/{{t.id}}" style="color: darkgreen">Delete</button></td>
+    </tr>
+  </table>
+</div>

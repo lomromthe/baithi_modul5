@@ -1,0 +1,23 @@
+<form [formGroup]="formEdit" (submit)="createEdit()">
+  <div class="mb-3 mt-3">
+
+    <input type="text" class="form-control" id="id" placeholder="Enter id" name="id" formControlName="id" hidden="">
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Tên tour:</label>
+    <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" formControlName="title">
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Giá:</label>
+    <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" formControlName="price">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Mô tả:</label>
+    <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" formControlName="description">
+  </div>
+
+  <button type="submit" class="btn btn-primary" >Sửa</button>
+  <button type="submit" class="btn btn-primary" routerLink="/">Hủy</button>
+</form>
+
+
